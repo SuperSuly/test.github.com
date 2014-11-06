@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>练习项目</title>
+<link href="./font-awesome-4.2.0/font-awesome-4.2.0/css/font-awesome.css"  rel="stylesheet" type="text/css">
+</head>
+<body>
+<style type="text/css">	 
+.container, .container *{margin: 0; padding :0; margin:0 auto}
+.container{width:808px; height:408px; overflow:hidden;position:relative; z-index: 1;
+border-top:1px solid black;}
+.slider{position:absolute;}
+.slider li{ list-style:none;display:inline;}
+.slider img{ width:808px; height:408px; display:block;}
+.slider2{width:3000px;}
+.slider2 li{float:left;}
+.num{ position:absolute; right:5px; bottom:5px;}
+.num li{float: left;color: #FF7300;text-align: center;line-height: 16px;width: 16px;height: 16px;font-family: Arial;font-size: 12px;cursor: pointer;overflow: hidden;margin: 3px 1px;border: 1px solid #FF7300;background-color: #fff;}
+.num li.on{color: #fff;line-height: 21px;width: 21px;height: 21px;font-size: 16px;margin: 0 1px;border: 0;background-color: #FF7300;font-weight: bold;}
+.line {position:absolute; list-style:none;  display:inline;}
+.line2{width:3000px;}
+.line2 li{float:left;text-align:center; /* 文字等内容居中 */ }
+.line li{width:808px; height:18px; display:block;color: rgb(239,239,239); box-shadow: 1px 1px 3px rgba(76%,76%,76%,0.5);background-color: rgb(140,140,140);opacity:0.7;}
+.align-center{ 
+margin:0 auto; /* 居中 这个是必须的，，其它的属性非必须 */ 
+ /* 背景色 */ 
+} 
+.head{
+  margin:0 auto;  
+  width:808px;
+  position: relative;z-index: 2;
+  background: black;
+  
+  height: 25px;
+}
+.head span {
+  display:inline;
+  float: left;
+  height: 25px;
+}
+
+.head-search{display:inline; margin-left: 10px; }
+
+#nav ul {
+  list-style-type: none;
+  width: 500px;    
+  margin: 0;
+  padding: 0;
+  position: relative;z-index: 2;
+}
+
+#nav ul li {  
+  float: left; 
+  margin: 5px 1px 0 0;
+  width: 150px;
+  padding: 0;  
+}
+
+#nav ul li a{  
+  text-decoration: none;
+  color: #39c;
+  text-align:center; 
+  font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight:bold; 
+  display: block;
+}
+
+#nav ul li ul{  
+  width: 80px;
+  margin: 0;
+  padding: 0;
+  position: fixed;  
+}
+
+#nav ul li ul li{  
+  display: block;
+  margin-top: 0px;
+  padding: 0;
+  width: 150px;
+}
+
+#nav ul li ul li a{  
+  color: white;  
+  font-weight:lighter
+}
+
+#nav ul li ul{ display: none;}
+
+#nav ul li:hover ul  { display:block;}
+
+#nav ul li ul li a:hover{color: black;}
+
+.log_conntainer{
+  width:808px;
+  height: 640px;
+  position: relative;
+  top:10px ;
+  border-top:1px solid #c2c2c2;;
+  margin:0 auto;  
+}
+
+.bcak{
+  width: 808px;
+  height: 20px;
+  background-color: #222;
+
+}
+.logs{
+  margin-top: 10px;
+  width:94%;
+  height: 25px; 
+  text-align: right;
+}
+
+.logs a{
+  width: 60px;
+  height: 20px;
+  margin: 0;padding: 0;
+  font: Verdana, Geneva, Arial, Helvetica, sans-serif, bold;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.logs a{
+  text-decoration: none;
+  font:80%;
+}
+
+.logs a:before {
+content: "\203A \203A";
+display: inline-block;
+margin-right: 5px;
+width: 15px;
+height: 9px;
+font: 50%;
+}
+
+.log_list{
+
+margin: 1px; 
+}
+
+.log_list li  {
+list-style-type: none;
+width: 300px;
+height: 200px;
+display: inline;
+border-style: solid 1px;
+}
+
+ .log_list li div {
+float: left;
+margin-right: 50px;
+margin-left: 50px;
+width: 300px;
+height: 200px;
+border-style: solid 1px;
+}
+
+.log_list li a{
+margin: 1px; 
+width: 80px;
+height: 200px;
+text-decoration: none;
+text-align:center;
+}
+
+.log_list li a img{
+margin: 0px;
+margin-bottom: -10px;
+padding: 0px;
+}
+
+.log_list li p{
+font: ConduitItc,Helvetica,sans-serif, bold;
+color: black;
+}
+
+.log_title{
+background: url(notebook.jpg)  no-repeat  right ;
+margin: 0px;
+padding: 0px;
+padding-left: 5px;
+padding-right: 5px;
+font:italic bold 12px/20px arial,sans-serif;
+font-size:medium;
+}
+
+
+.log_pic{
+background: url(leaflet.jpg) no-repeat right;
+margin: 0px;
+padding: 0px;
+height: 60px;
+
+/* position: relative; top: -20px; */
+}
+
+.log_content {
+margin: 0px;
+text-decoration:underline;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 15px;
+background: url(notebook.jpg)   right;
+
+}
+
+.log_foot {
+margin: 0px;
+width: 280px;
+height: 15px;
+padding-top: -5px;
+padding-bottom: 2px;
+padding-left: 20px;
+background: url(log_foot.jpg)  no-repeat right;
+position: relative; top: -15px; 
+}
+
+.foot{
+border-top: 1px solid #c2c2c2;
+margin: 40px auto;
+padding: 30px 0 0;
+width: 808px;
+display: block;
+}
+.foot-content {
+margin-left: auto;
+margin-right: auto;
+max-width: 1000px;
+width: 100%;
+margin: 0 auto 50px;
+clear: both;
+display: block;
+height: 240px;
+}
+
+.foot-content-help {
+display: inline;
+float: left;
+width: 30%;
+position: relative;
+text-align: center;
+}
+
+.foot-content-help .foot-content-mail{
+margin: 5px 0 0px;
+}
+.foot-content-help-header .foot-content-mail-header{
+margin: 5px 0 10px;
+clear: both;
+}
+
+.foot-content-help p{
+margin: 5px 0;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+.foot-content-mail{
+display: inline;
+float: right;
+width: 40%;
+text-align: center;
+}
+
+.foot-content-mail h3{
+margin: 20px 0 10px;
+clear: both;
+}
+
+.foot-content-mail button{
+height: 43px;
+line-height: 40px;
+max-height: 43px;
+width: 42px;
+padding-top: -10px;
+background-color: white;
+box-shadow: 0px;
+}
+
+.foot-content-mail button img{
+display: inline-block;
+vertical-align: middle;
+font-size: 24px;  
+}
+
+.foot-content-mail input{
+padding: 10px;
+height: 20px;
+line-height: 20px;
+width: 200px;  
+border-radius: 3px;
+border: 1px solid #999;
+font-family: Conduit,Helvetica,sans-serif;
+}
+
+.foot-menu {
+width: 70%;
+float:left;
+}
+
+.foot-menu h3 {
+width: 70%;
+font-size: 24px;
+line-height: 1.041666667;
+font-family: Conduit,Helvetica,sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.foot-menu-aboutus{
+list-style: none;
+list-style-image: none;
+padding-left: 0; 
+
+}
+
+.foot-menu-aboutus li{
+word-wrap: break-word;
+display: inline;
+float: left;
+width: 30%;
+margin: 0 5px 10px;
+}
+
+.foot-socialwrapper {
+width: 30%;
+float:left;
+}
+
+.foot-socialwrapper h3 {
+float:left;
+font-size: 24px;
+line-height: 1.041666667;
+font-family: Conduit,Helvetica,sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.foot-menu-aboutus li a, .foot-socialapp li a{
+color: #39c;
+text-decoration: none;
+}
+
+.foot-socialapp{
+list-style: none;
+clear: both;
+list-style-image: none;
+width: 100%;
+padding-left: 0;
+}
+
+.foot-socialapp li{  
+display: inline;
+float: left;
+width: 25%;
+margin: 0 5px 10px;
+}
+
+
+
+.foot-info{
+padding: 30px 0;
+background-color: #222;
+clear: both;
+position: relative;
+}
+
+.foot-info p{
+color: white;
+font-size: 14px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+</style>
+<div id="main" class="align-center">
+  <div class="head">
+    <span class="head-search-nav">
+      <div id="search-box" class="head-search">    
+      <input id="search_input" type="text">
+      <button id="head-search-button" class="btn-submit-search" type="submit">Search</button>
+    
+      </div>  
+    </span>
+    <span id="nav">          
+      <ul>
+        <li><a href="#" _fcksavedurl="#">&nbspAsia&nbsp</a> 
+          <ul> 
+          <li><a href="#" _fcksavedurl="#">Japan</a></li> 
+          <li><a href="#" _fcksavedurl="#">China</a></li> 
+          <li><a href="#" _fcksavedurl="#">India</a></li> 
+          <li><a href="#" _fcksavedurl="#">Malaysia</a></li> 
+          <li><a href="#" _fcksavedurl="#">Korea</a></li> 
+          <li><a href="#" _fcksavedurl="#">Philippines</a></li> 
+          </ul> 
+        </li>  
+        <li><a href="#" _fcksavedurl="#">&nbspEurope&nbsp</a> 
+          <ul> 
+          <li><a href="#" _fcksavedurl="#">Italy</a></li> 
+          <li><a href="#" _fcksavedurl="#">Germany</a></li> 
+          <li><a href="#" _fcksavedurl="#">France</a></li> 
+          <li><a href="#" _fcksavedurl="#">Greece</a></li> 
+          <li><a href="#" _fcksavedurl="#">Switzerland</a></li>           
+          </ul> 
+        </li> 
+        <li><a href="#" _fcksavedurl="#">&nbspOceania&nbsp</a> 
+          <ul> 
+          <li><a href="#" _fcksavedurl="#">Australia</a></li> 
+          <li><a href="#" _fcksavedurl="#">New&nbspZealand</a></li>                 
+          </ul> 
+        </li>        
+      </ul>     
+    </span>
+  </div> 
+  
+  <div class="container " id="idTransformView2">
+    
+    <ul class="slider slider2" id="idSlider2">
+      <li><img src="1.jpg"/></li>
+      <li><img src="2.jpg"/></li>
+      <li><img src="3.jpg"/></li>
+    </ul>
+    <ul class="num" id="idNum2">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul class="line line2" id="lines">
+      <li>Turkey Istanbul </li>
+      <li>England Edinburgh </li>
+      <li>Italy Fiorenza</li>
+    </ul>
+  </div>
+  <div class="log_conntainer" >
+    <div class="logs">  
+      <i class="fa fa-book"></i>
+      <a href="#" _fcksavedurl="#"> more</a>      
+    </div>
+    <div class="log_list">
+        <li>
+         <div>
+           <a href="#" _fcksavedurl="#">
+             <img src="log1.jpg"  alt="High desert adventure">
+             <p class="log_pic">&nbsp</p>
+             <p class="log_title">High desert adventure</p>
+             <p class="log_content">The high desert furnishes a wide variety of camping opportunities which are close to many of us out in the American West. The high deserts are plentiful in every western state.Here, Lake Powell offers a unique camping experience. A fleet of luxury houseboats awaits your arrival. The vermilion cliffs of southern Utah stand out above its sagebrush flats.....&gt&gtmore</p>
+             <p class="log_foot">&nbsp</p> 
+           </a>
+         </div>
+        </li>
+        <li>
+         <div>
+           <a href="#" _fcksavedurl="#">
+             <img src="log3.jpg"  alt="High desert adventure">
+             <p class="log_pic">&nbsp</p>
+             <p class="log_title">Appalachian paradise</p>
+             <p class="log_content">Athletic career woman meets good-ole-boy for a five-day backpacking trek in the rugged North Carolina mountains. Appalachian born Wes triggers Suzanne's resentment and her desire amongst boars, bears and Girl Scouts. Suzanne's pack and old hurts lighten as Wes' easy charm helps her truly see the hope and allure of spring flowers.....&gt&gtmore</p>
+             <p class="log_foot">&nbsp</p> 
+           </a>
+         </div>
+        </li>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <section class="foot-content">
+      <section class="foot-content-help">
+        <img src="help.jpg" ></img>
+        <h3 class="foot-content-help-header">Need Help?</h3>
+        <p class="foot-content-help-body">Talk to Agent 24/7 about your travel related need</p>
+        <img src="chatnow.jpg" ></img>
+        <p>Call: <strong>86-028-86135653</strong></p>
+      </section>
+      <section class="foot-content-mail">
+        <img src="mail.jpg" ></img>
+        <h3 class="foot-content-mail-header">STAY IN THE KNOW</h3>
+        <p class="foot-content-mail-body">Sign up to get SuperTour.com news, sales and deals</p>
+        <div>
+          <input type="text" placeholder="kevin@gmail.com"></input>
+          <button>
+          <img src="mailbutton.jpg" ></img></button>
+        </div>
+      </section>
+    </section>
+    <div class="foot-menu">
+      <h3>About Us</h3>
+      <ul class="foot-menu-aboutus">
+        <li><a href="#" _fcksavedurl="#">What is SuperTour.com?</a></li>
+        <li><a href="#" _fcksavedurl="#">Land Your Dream Job</a></li>
+        <li><a href="#" _fcksavedurl="#">Advertise With Us</a></li>
+        <li><a href="#" _fcksavedurl="#">Site Map</a></li>
+        <li><a href="#" _fcksavedurl="#">Learning Resourses</a></li>
+        <li><a href="#" _fcksavedurl="#">Affiliate Program</a></li>
+        <li><a href="#" _fcksavedurl="#">Privacy Policy</a></li>
+        <li><a href="#" _fcksavedurl="#">Legal Notices</a></li>
+        <li><a href="#" _fcksavedurl="#">Travel Guide</a></li>        
+      </ul>
+    </div>
+    <div class="foot-socialwrapper">
+      <h3>Follow Us</h3>
+      <ul class="foot-socialapp">
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-twitter fa-2x"></i></a></li>  
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-facebook fa-2x"></i></a></li> 
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-youtube fa-2x"></i></a></li> 
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-weibo fa-2x"></i></a></li> 
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-weixin fa-2x"></i></a></li> 
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-renren fa-2x"></i></a></li> 
+        <li><a href="#" _fcksavedurl="#"><i class="fa fa-qq fa-2x"></i></a></li>       
+      </ul>
+    </div>
+    <section class="foot-info">
+      <p>© SuperTour.com – All Rights Reserved</p>
+    </section>
+  </footer>
+</div>
+
+
+<script type="text/javascript">
+var $ = function (id) {
+return "string" == typeof id ? document.getElementById(id) : id;
+};
+var Class = {
+  create: function() {
+return function() {
+ this.initialize.apply(this, arguments);
+}
+  }
+}
+Object.extend = function(destination, source) {
+for (var property in source) {
+destination[property] = source[property];
+}
+return destination;
+}
+var TransformView = Class.create();
+TransformView.prototype = {
+  //容器对象,滑动对象,切换参数,切换数量
+  initialize: function(container, slider, lines, parameter, count, options) {
+if(parameter <= 0 || count <= 0) return;
+var oContainer = $(container), oSlider = $(slider), oThis = this, oLines = $(lines);
+this.Index = 0;//当前索引
+this._timer = null;//定时器
+this._slider = oSlider;//滑动对象
+this._lines = oLines;
+this._parameter = parameter;//切换参数
+this._count = count || 0;//切换数量
+this._target = 0;//目标参数
+this.SetOptions(options);
+this.Up = !!this.options.Up;
+this.Step = Math.abs(this.options.Step);
+this.Time = Math.abs(this.options.Time);
+this.Auto = !!this.options.Auto;
+this.Pause = Math.abs(this.options.Pause);
+this.onStart = this.options.onStart;
+this.onFinish = this.options.onFinish;
+oContainer.style.overflow = "hidden";
+oContainer.style.position = "relative";
+oSlider.style.position = "absolute";
+oSlider.style.top = oSlider.style.left = 0;
+  },
+  //设置默认属性
+  SetOptions: function(options) {
+this.options = {//默认值
+Up:	true,//是否向上(否则向左)
+Step:	5,//滑动变化率
+Time:	10,//滑动延时
+Auto:	true,//是否自动转换
+Pause:	2000,//停顿时间(Auto为true时有效)
+onStart:	function(){},//开始转换时执行
+onFinish:	function(){}//完成转换时执行
+};
+Object.extend(this.options, options || {});
+  },
+  //开始切换设置
+  Start: function() {
+if(this.Index < 0){
+this.Index = this._count - 1;
+} else if (this.Index >= this._count){ this.Index = 0; }
+this._target = -1 * this._parameter * this.Index;
+this.onStart();
+this.Move();
+  },
+  //移动
+  Move: function() {
+clearTimeout(this._timer);
+var oThis = this, style = this.Up ? "top" : "left", iNow = parseInt(this._slider.style[style]) || 0, iStep = this.GetStep(this._target, iNow);
+if (iStep != 0) {
+this._slider.style[style] = (iNow + iStep) + "px";
+this._lines.style[style] = (iNow + iStep) + "px";
+this._timer = setTimeout(function(){ oThis.Move(); }, this.Time);
+} else {
+this._slider.style[style] = this._target + "px";
+this._lines.style[style] = (iNow + iStep) + "px";
+this.onFinish();
+if (this.Auto) { this._timer = setTimeout(function(){ oThis.Index++; oThis.Start(); }, this.Pause); }
+}
+  },
+  //获取步长
+  GetStep: function(iTarget, iNow) {
+var iStep = (iTarget - iNow) / this.Step;
+if (iStep == 0) return 0;
+if (Math.abs(iStep) < 1) return (iStep > 0 ? 1 : -1);
+return iStep;
+  },
+  //停止
+  Stop: function(iTarget, iNow) {
+clearTimeout(this._timer);
+this._slider.style[this.Up ? "top" : "left"] = this._target + "px";
+  }
+};
+window.onload=function(){
+function Each(list, fun){
+for (var i = 0, len = list.length; i < len; i++) { fun(list[i], i); }
+};
+var objs = $("idNum2").getElementsByTagName("li");
+
+function getclientWidth ()
+{
+  var clientWidth =0;
+  if(document.body.clientWidth &&document.documentElement.clientWidth )
+  {
+  var clientWidth  = (document.body.clientWidth <document.documentElement.clientWidth )?document.body.clientWidth :document.documentElement.clientWidth ;   
+  }
+  else
+  {
+  var clientWidth  = (document.body.clientWidth >document.documentElement.clientWidth )?document.body.clientWidth :document.documentElement.clientWidth ;   
+  }
+  return clientWidth ;
+}
+
+var width=getclientWidth ();
+document.getElementById('main').style.width = "1008px";
+var xx = document.getElementById('main').clientWidth;
+
+
+var tmp = parseInt(width/1.579);
+var myWidth = parseInt(xx/1.247);
+var myNum = 3;
+
+var tv = new TransformView("idTransformView2", "idSlider2", "lines", myWidth, myNum, {
+onStart: function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) },//按钮样式
+Up: false
+});
+tv.Start();
+Each(objs, function(o, i){
+o.onmouseover = function(){
+o.className = "on";
+tv.Auto = false;
+tv.Index = i;
+tv.Start();
+}
+o.onmouseout = function(){
+o.className = "";
+tv.Auto = true;
+tv.Start();
+}
+})
+}
+</script>
+</body>
+</html>
